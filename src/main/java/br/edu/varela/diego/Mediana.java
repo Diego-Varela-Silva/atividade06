@@ -18,11 +18,14 @@ class Mediana {
             return 0;
         });
 
-        if (valoresEmLista.size() / 2 != 0) {
+        if (valoresEmLista.size() % 2 != 0) {
             return valoresEmLista.get(valoresEmLista.size() / 2);
+        } else {
+            Double valor1 = valoresEmLista.get((valoresEmLista.size() / 2) - 1);
+            Double valor2 = valoresEmLista.get(valoresEmLista.size() / 2);
+            return (valor1 + valor2) / 2;
         }
 
-        return 0;
     }
 
 }
