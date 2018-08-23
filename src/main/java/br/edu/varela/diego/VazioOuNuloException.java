@@ -6,5 +6,5 @@ class VazioOuNuloException extends RuntimeException {
     public String getMessage() {
         return "Nao pode ser nulo ou vazio";
     }
-    
+
 }

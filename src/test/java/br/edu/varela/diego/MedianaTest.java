@@ -11,10 +11,11 @@ public class MedianaTest {
         mediana.calcular(null);
     }
 
+    @Test
     public void testaEntradaComIndiceImpar() {
         Mediana mediana = new Mediana();
-        double [] entrada = new double[]{ 2, 1, 3 };
-        assertEquals(2, mediana.calcular(entrada), 1.0);
+        Double[] entrada = new Double[]{ 2D, 1D, 3D };
+        assertEquals(2, mediana.calcular(entrada), 0.1);
     }
 
 }
