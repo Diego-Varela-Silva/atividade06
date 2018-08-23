@@ -2,8 +2,10 @@ package br.edu.varela.diego;
 
 class Mediana {
 
-    void calcular(double[] valores) throws VazioOuNuloException {
-        throw new VazioOuNuloException();
+    double calcular(double[] valores) {
+        if (valores == null) throw new VazioOuNuloException();
+
+        return 1;
     }
 
 }
