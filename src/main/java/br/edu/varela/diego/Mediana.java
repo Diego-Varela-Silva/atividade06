@@ -8,6 +8,7 @@ class Mediana {
 
     double calcular(Double[] valores) {
         if (valores == null) throw new VazioOuNuloException();
+        if (valores.length == 0) throw new VazioOuNuloException();
 
         List<Double> valoresEmLista = Arrays.asList(valores);
 
