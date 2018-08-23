@@ -24,4 +24,11 @@ public class MedianaTest {
         assertEquals(2, mediana.calcular(entrada), 0.1);
     }
 
+    @Test
+    public void testaEntradaComIndicePar() {
+        Mediana mediana = new Mediana();
+        Double[] entrada = new Double[]{ 2D, 1D, 3D, 4D };
+        assertEquals(2.5, mediana.calcular(entrada), 0.1);
+    }
+
 }
