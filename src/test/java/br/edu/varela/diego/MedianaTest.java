@@ -11,6 +11,12 @@ public class MedianaTest {
         mediana.calcular(null);
     }
 
+    @Test(expected = VazioOuNuloException.class)
+    public void testaEntradaVaziaDeveRetornarExcessao() {
+        Mediana mediana = new Mediana();
+        mediana.calcular(new Double[0]);
+    }
+
     @Test
     public void testaEntradaComIndiceImpar() {
         Mediana mediana = new Mediana();
