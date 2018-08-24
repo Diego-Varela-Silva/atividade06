@@ -7,8 +7,7 @@ import java.util.List;
 class Mediana {
 
     double calcular(Double[] valores) {
-        if (valores == null) throw new VazioOuNuloException();
-        if (valores.length == 0) throw new VazioOuNuloException();
+        validaValores(valores);
 
         List<Double> valoresEmLista = Arrays.asList(valores);
 
@@ -29,13 +28,17 @@ class Mediana {
     }
 
     double calcularMedia(Double[] valores) {
-        if (valores == null) throw new VazioOuNuloException();
-        if (valores.length == 0) throw new VazioOuNuloException();
+        validaValores(valores);
 
         double soma = Arrays.stream(valores)
                 .reduce((n1, n2) -> n1 + n2)
                 .orElse(0D);
 
         return soma / valores.length;
+    }
+
+    private void validaValores(Double[] valores) {
+        if (valores == null) throw new VazioOuNuloException();
+        if (valores.length == 0) throw new VazioOuNuloException();
     }
 }
