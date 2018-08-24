@@ -41,4 +41,20 @@ class Mediana {
         if (valores == null) throw new VazioOuNuloException();
         if (valores.length == 0) throw new VazioOuNuloException();
     }
+
+    double calcularMenorValor(Double[] valores) {
+        validaValores(valores);
+
+        double soma = Arrays.stream(valores)
+                .reduce((n1, n2) -> {
+                    if (n1 > n2) {
+                        return n1;
+                    } else {
+                        return n2;
+                    }
+                })
+                .orElse(0D);
+
+        return soma / valores.length;
+    }
 }
