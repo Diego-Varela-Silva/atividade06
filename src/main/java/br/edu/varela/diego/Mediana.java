@@ -28,4 +28,14 @@ class Mediana {
 
     }
 
+    double calcularMedia(Double[] valores) {
+        if (valores == null) throw new VazioOuNuloException();
+        if (valores.length == 0) throw new VazioOuNuloException();
+
+        double soma = Arrays.stream(valores)
+                .reduce((n1, n2) -> n1 + n2)
+                .orElse(0D);
+
+        return soma / valores.length;
+    }
 }
